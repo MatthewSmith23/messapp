@@ -1,16 +1,19 @@
 import React, { useRef } from 'react'
 import { Modal, Form,  Button} from 'react-bootstrap'
+import { useContacts} from '../contexts/ContactsProvider'
 
 export default function NewContactModal({ closeModal }) {
 const idRef = useRef()
     const nameRef = useRef()
+    const { createContact } = useContacts()
 
 
 
     function handleSubmit(e) {
         e.preventDefault()
 
-        createContact(idRef.current.)
+        createContact(idRef.current.value, nameRef.current.value)
+        closeModal()
     }
 
 
