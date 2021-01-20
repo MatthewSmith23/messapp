@@ -54,10 +54,10 @@ function sendMessage(recipients, text) {
     addMessageToConversation({ recipients, text, sender: id })
 }
 
-const formattedConversations = conversations.map((conversation, index) => {
+const formattedConversations = conversations.map((conversation, index ) => {
     const recipients = conversation.recipients.map(recipient => {
         const contact = contacts.find(contact => {
-            return contact.id === recipient 
+            return contact.id === recipient
         })
         const name = (contact && contact.name) || recipient 
         return { id: recipient, name }
