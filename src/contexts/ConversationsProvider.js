@@ -62,6 +62,8 @@ const formattedConversations = conversations.map((conversation, index ) => {
         const name = (contact && contact.name) || recipient 
         return { id: recipient, name }
     })
+
+    
     const messages = conversation.messages.map(message => {
 const contact = contacts.find(contact => {
     return contact.id === message.sender
