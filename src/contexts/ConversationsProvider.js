@@ -30,7 +30,7 @@ function addMessageToConversation({ recipients, text, sender }) {
         const newConversations = prevConversations.map(conversation => {
             if (arrayEquality(conversation.recipients, recipients)) {
                 madeChange = true 
-                return { ...conversations, message: [conversation.messages, newMessage]
+                return { ...conversation, messages: [...conversation.messages, newMessage]
                 }
             }
 
