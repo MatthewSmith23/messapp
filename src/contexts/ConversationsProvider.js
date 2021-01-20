@@ -1,5 +1,5 @@
 import userEvent from '@testing-library/user-event';
-import React, { useContext, useState} from 'react'
+import React, { useContext, useState } from 'react'
 import useLocalStorage from '../hooks/useLocalStorage';
 import { useContacts } from './ContactsProvider'
 

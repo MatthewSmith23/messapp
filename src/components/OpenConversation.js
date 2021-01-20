@@ -22,10 +22,10 @@ export default function OpenConversation() {
                         return (
                             <div
                                 key={index}
-                                className="my-1 d-flex flex-column"
+                                className={`my-1 d-flex flex-column ${message.fromMe ? 'align-self-end' : ''}`}
                             >
                                 <div
-                                    className={`rounded px-2 py-1 ${message.from ? 'bg-primary text-white' : 'border'}`}>
+                                    className={`rounded px-2 py-1 ${message.fromMe ? 'bg-primary text-white' : 'border'}`}>
                                     {message.text}
                                 </div>
                                 <div className={`text-muted small ${message.fromMe ? 'text-right' : ''}`}>
